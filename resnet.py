@@ -15,6 +15,7 @@ from keras.layers.normalization import BatchNormalization
 
 
 # Helper to build a conv -> BN -> relu block
+# interesting way of function definition
 def _conv_bn_relu(nb_filter, nb_row, nb_col, subsample=(1, 1)):
     def f(input):
         conv = Convolution2D(nb_filter=nb_filter, nb_row=nb_row, nb_col=nb_col, subsample=subsample,
